@@ -13,4 +13,13 @@ express()
       ws: true,
     })
   )
+  .use(
+    "/support-panel",
+    createProxyMiddleware({
+      target: "http://localhost:4202",
+      pathRewrite: { "^/support-panel": "" },
+      changeOrigin: true,
+      ws: true,
+    })
+  )
   .listen(80);
