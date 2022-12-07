@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:command-center": "ng serve --project command-center --port 4201",
-    "start:support-panel": "ng serve --project support-panel --port 4202"
+    "start:command-center": "ng serve --project command-center --port 4201 --serve-path /command-center",
+    "start:support-panel": "ng serve --project support-panel --port 4202 --serve-path /support-panel"
   },
   "private": true,
   "dependencies": {

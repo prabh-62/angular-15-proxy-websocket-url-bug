@@ -1,5 +1,11 @@
-http://cc.localhost
+http://cc.localhost {
+	handle_path /command-center/* {
+		reverse_proxy localhost:4201
+		rewrite * /command-center/{path}
+	}
 
-handle_path /command-center/* {
-     reverse_proxy localhost:4201
- }
+	handle_path /support-panel/* {
+		reverse_proxy localhost:4202
+		rewrite * /support-panel/{path}
+	}
+}
