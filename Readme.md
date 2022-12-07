@@ -5,9 +5,10 @@
 - .NET 7 SDK (brew install --cask dotnet-sdk)
 
 ## Run
+- cd to `web-apps` and `npm run start:command-center`
+  
 - cd to `dotnet-based-proxy` and `dotnet run`
   - dotnet CLI might ask you for admin password so it can run on 80 port. You can change the port in `Proxy/Properties/launchSettings.json` if you can't get it to work
-- cd to `web-apps` and `npm run start:command-center`
 - Navigate to `http://localhost/command-center` and observe console logs
 - ![ng serve behind a dotnet reverse proxy](./websocket_url_failed.png)
 
@@ -16,3 +17,4 @@
 - ![ng serve behind a nodejs reverse proxy](./websocket_url_connected_nodejs.png)
   
 
+- websockets fail on `caddy-based-proxy` as well

@@ -1,0 +1,5 @@
+http://cc.localhost
+
+handle_path /command-center/* {
+     reverse_proxy localhost:4201
+ }
